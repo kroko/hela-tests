@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="code\src\HelloFBdevEvents.cpp" />
+    <ClCompile Include="code\src\HelloFBdevMain.cpp" />
+    <ClCompile Include="code\src\HelloFBdevNucleus.cpp" />
+    <ClCompile Include="dependencies\devbenches\msw-msvc\glad\src\glad.c" />
+    <ClCompile Include="dependencies\shared\hela\hela\src\nucleus\desktop-genericos\NucleusGenericOs.cpp" />
+    <ClCompile Include="dependencies\shared\hela\hela\src\nucleus\desktop-genericos\RunnerGenericOs.cpp" />
+    <ClCompile Include="dependencies\shared\hela\hela\src\nucleus\NucleusAbstract.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="code\include\HelloFBdevAssets.hpp" />
+    <ClInclude Include="code\include\HelloFBdevGeometry.hpp" />
+    <ClInclude Include="code\include\HelloFBdevNucleus.hpp" />
+    <ClInclude Include="code\include\warp-helpers.hpp" />
+    <ClInclude Include="code\include\warp-shader-functions.hpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{ED9DB809-8DEE-431F-A3E7-B717DF57B83D}</ProjectGuid>
+    <RootNamespace>HelloFBdev</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)..\..\..\code\include;$(ProjectDir)..\..\..\dependencies\shared\hela\hela\include;$(ProjectDir)..\..\..\dependencies\shared\hela\food\spdlog\include;$(ProjectDir)..\..\..\dependencies\devbenches\msw-msvc\glad\include;$(ProjectDir)..\..\..\dependencies\devbenches\msw-msvc\glfw\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\..\..\dependencies\devbenches\msw-msvc\glfw\lib-vc2017\$(PlatformShortName)\$(Configuration)\static;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Build\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IntDir>BuildObj\$(PlatformShortName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(ProjectDir)..\..\..\code\include;$(ProjectDir)..\..\..\dependencies\shared\hela\hela\include;$(ProjectDir)..\..\..\dependencies\shared\hela\food\spdlog\include;$(ProjectDir)..\..\..\dependencies\devbenches\msw-msvc\glad\include;$(ProjectDir)..\..\..\dependencies\devbenches\msw-msvc\glfw\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\..\..\dependencies\devbenches\msw-msvc\glfw\lib-vc2017\$(PlatformShortName)\$(Configuration)\static;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Build\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IntDir>BuildObj\$(PlatformShortName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)..\..\..\code\include;$(ProjectDir)..\..\..\dependencies\shared\hela\hela\include;$(ProjectDir)..\..\..\dependencies\shared\hela\food\spdlog\include;$(ProjectDir)..\..\..\dependencies\devbenches\msw-msvc\glad\include;$(ProjectDir)..\..\..\dependencies\devbenches\msw-msvc\glfw\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\..\..\dependencies\devbenches\msw-msvc\glfw\lib-vc2017\$(PlatformShortName)\$(Configuration)\static;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Build\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IntDir>BuildObj\$(PlatformShortName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(ProjectDir)..\..\..\code\include;$(ProjectDir)..\..\..\dependencies\shared\hela\hela\include;$(ProjectDir)..\..\..\dependencies\shared\hela\food\spdlog\include;$(ProjectDir)..\..\..\dependencies\devbenches\msw-msvc\glad\include;$(ProjectDir)..\..\..\dependencies\devbenches\msw-msvc\glfw\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\..\..\dependencies\devbenches\msw-msvc\glfw\lib-vc2017\$(PlatformShortName)\$(Configuration)\static;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Build\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IntDir>BuildObj\$(PlatformShortName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)..\..\..\code\assets" "$(TargetDir)assets" /D /Y /E /I</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy assets (shaders, textures...) next to compiled binary</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)..\..\..\code\assets" "$(TargetDir)assets" /D /Y /E /I</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy assets (shaders, textures...) next to compiled binary</Message>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)..\..\..\code\assets" "$(TargetDir)assets" /D /Y /E /I</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy assets (shaders, textures...) next to compiled binary</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)..\..\..\code\assets" "$(TargetDir)assets" /D /Y /E /I</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy assets (shaders, textures...) next to compiled binary</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
