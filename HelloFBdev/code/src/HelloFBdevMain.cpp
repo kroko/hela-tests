@@ -26,10 +26,9 @@ int main(int argc, char const * const argv[]) {
   // --------------------------------
   // Do not touch ^_^
 #if defined(HELA_LINUX_ARM_FBDEV_MALI_ALLWINNER)
-  hela::nucleus::NucleusLinuxFbdevMaliAllwinner::main<HelloFBdev>(argc, argv, &HelloFBdev::prepareNucleus, &HelloFBdev::prepareMotor);
+  return hela::nucleus::NucleusLinuxFbdevMaliAllwinner::main<HelloFBdev>(argc, argv, &HelloFBdev::prepareNucleus, &HelloFBdev::prepareMotor);
 #else
-  hela::nucleus::NucleusGenericOs::main<HelloFBdev>(argc, argv, &HelloFBdev::prepareNucleus, &HelloFBdev::prepareMotor);
+  return hela::nucleus::NucleusGenericOs::main<HelloFBdev>(argc, argv, &HelloFBdev::prepareNucleus, &HelloFBdev::prepareMotor);
 #endif
 
-  return 0;
 }
