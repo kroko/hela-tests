@@ -223,7 +223,7 @@ GNU stack comes via [Armbian](https://www.armbian.com) (*server* variation obvio
 
 The mentioned *Mali* loadable kernel object was built against kernel headers, *lima* unloaded, *mali* loaded.
 
-*Allwinner H3* becomes hot, very hot. This is why Ondřej Jirman's work was used while building the kernel -  @megous has tried to [address this issue](http://linux-sunxi.org/Template:H3_Support_status#Mainline_kernel).
+*Allwinner H3* becomes hot, very hot. This is why Ondřej Jirman's work was used while building the kernel -  [@megous](https://github.com/megous) has tried to [address this issue](http://linux-sunxi.org/Template:H3_Support_status#Mainline_kernel).
 
 ## Building on devbenches
 
