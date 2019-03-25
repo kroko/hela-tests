@@ -33,7 +33,7 @@ FLAGS_OPT	= -O0 # develop, optimize for compile time
 
 ## ============================================================================
 ## CONSTANT SECTION
-# probably no need to edit anything below for this demo
+# probably no need to edit anything below for this test
 # g++ (Debian 6.3.0-18+deb9u1) 6.3.0 20170516
 
 ## --------------------------------

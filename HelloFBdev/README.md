@@ -8,13 +8,13 @@ A triangle is a polygon with three edges and three vertices. It is one of the ba
 
 See this repo root readme which should explain steps to build on SoC in detail.
 
-* `dependencies/shared/download_shared_dependencies-posix.sh`
+* `bash dependencies/shared/download_shared_dependencies-posix.sh`
 * `cd projectfiles/fbdev-<soc_name>`
-* Edit `Makefile`
+* `<your_favourite_editor_to_edit> Makefile`
 * `make`
 * `./run.sh --width 1920 --height 1080`
 
-## Command line arguments
+### Command line arguments
 
 `--width <INT>` for width expressed in pixels  
 `--height <INT>` for height expressed in pixels  
@@ -23,24 +23,25 @@ See this repo root readme which should explain steps to build on SoC in detail.
 ./run.sh --width 1920 --height 1080
 ```
 
-## User input controls
+### User input controls
 
 None, no need to specify. Input device usage is deliberately disabled in project code.
 
 `SIGINT` (`Control+C`) or `SIGQUIT` (`Control+\`)  to exit.
 
-## Building on devbench
+## Building on devbenches
 
-* See this repo root readme which should explain steps
+* See this repo root readme which should explain structure
+* Refer to `dependencies/README.md` about dependencies
 * Refer to `dependencies/shared/` to get shared deps
 * Refer to `dependencies/devbenches/<devbench_os>/README.md` to build devbench deps
 * Refer to `projectfiles/<devbench_os>/README.md` to build project
 
-### Try automated
+### Feeling lucky?
 
-If you are feeling lucky about the possibility that all devtools needed for this are already on your machine you can try this.
+It is possibe that all devtools needed are already on your machine.
 
-#### MSW
+#### MSW MSVC
 
 Fire up *Developer Command Promt*
 
@@ -54,7 +55,7 @@ start projectfiles\desktop-msw-msvc2017-vs\Build
 
 See contents of `x64` or `x86`.
 
-#### macOS
+#### macOS Clang
 
 Fire up *Terminal*
 
