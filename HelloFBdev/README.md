@@ -31,13 +31,32 @@ None, no need to specify. Input device usage is deliberately disabled in project
 
 ## Building on devbench
 
-* See this repo root readme which should explain steps.
-* Refer to `dependencies/devbenches/<devbench_os>/README.md`
-* Refer to `projectfiles/<devbench_os>/README.md`
+* See this repo root readme which should explain steps
+* Refer to `dependencies/shared/` to get shared deps
+* Refer to `dependencies/devbenches/<devbench_os>/README.md` to build devbench deps
+* Refer to `projectfiles/<devbench_os>/README.md` to build project
 
 ### Try automated
 
+If you are feeling lucky about the possibility that all devtools needed for this are already on your machine you can try this.
+
+#### MSW
+
+Fire up *Developer Command Promt*
+
+```bat
+cd <this_directory>
+call dependencies\shared\download_shared_dependencies-msw.bat
+call dependencies\devbenches\msw-msvc\build_dependencies-msw_msvc2017.bat
+call projectfiles\desktop-msw-msvc2017-vs\HelloFBdev.bat
+start projectfiles\desktop-msw-msvc2017-vs\Build
+```
+
+See contents of `x64` or `x86`.
+
 #### macOS
+
+Fire up *Terminal*
 
 ```sh
 cd <this_directory>
@@ -46,4 +65,5 @@ bash dependencies/devbenches/macos-clang/build_dependencies-macos_clang.sh
 bash projectfiles/desktop-macos-clang-xcode/HelloFBdev.sh
 open projectfiles/desktop-macos-clang-xcode/Build
 ```
+
 See contents of `Debug` or `Release`.
