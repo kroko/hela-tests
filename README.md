@@ -12,11 +12,11 @@ PoC was demanded for [Allwiner's Utgard - Mali-400 series](http://linux-sunxi.or
 
 ## Why?
 
-An $12 [Allwinner H3](http://linux-sunxi.org/H3) based board [Orange Pi Lite](http://www.orangepi.org/orangepilite/) w/ 512MB DDR3 SDRAM was given which includes *Mali400MP2* GPU, [sun8i](https://github.com/torvalds/linux/blob/master/arch/arm/boot/dts/sun8i-h3.dtsi) device tree. A question was asked - is it possible to create *OpenGL ES* application that runs directly on *H3* without any desktop environment on mainline kernel (thus the first task was getting kernel up and running) and if yes, what would be framerate for FHD output on this board? It coincided with another project where low-cost (to put it mildly) Alwinner's were evaluated for realtime (simple ^_^) graphics. Somehow it resulted in creating an abstraction layer [Hela]() for beeing able to wite tests on x64 for given SoC.
+An $12 [Allwinner H3](http://linux-sunxi.org/H3) based board [Orange Pi Lite](http://www.orangepi.org/orangepilite/) w/ 512MB DDR3 SDRAM was given which includes *Mali400MP2* GPU, [sun8i](https://github.com/torvalds/linux/blob/master/arch/arm/boot/dts/sun8i-h3.dtsi) device tree. A question was asked - is it possible to create *OpenGL ES* application that runs directly on *H3* without any desktop environment on mainline kernel (thus the first task was getting kernel up and running) and if yes, what would be framerate for FHD output on this board? It coincided with another project where low-cost (to put it mildly) Alwinner's were evaluated for realtime (simple ^_^) graphics. Somehow it resulted in creating an abstraction layer [Hela](https://github.com/WARP-LAB/hela) for being able to write tests on x64 for given SoC.
 
 These basic tests are made public in hope others would benefit in testing their Allwinner SoCs, kernel and Mali driver configs.
 
-That does not mean that these tests won't run on other SoCs (at least, it probably should on all *Allwinner* /w *Utgard* SoCs that can work with *Mali* drivers mentioned below). And if not, you can look at how *Hela* is constructed and throw in another *Nucleus* typedef branch.
+That does not mean that these tests won't run on other SoCs (at least, it probably should on all *Allwinner* /w *Utgard* SoCs that can work with *Mali* drivers mentioned below). And if not, you can look at how [Hela](https://github.com/WARP-LAB/hela) is constructed and throw in another *Nucleus* typedef branch.
 
 ## Drivers
 
@@ -180,7 +180,7 @@ GL_KEYBOARD=/dev/input/event1 GL_MOUSE=/dev/input/event0 ./run.sh --width 1920 -
 
 #### About different runner scripts
 
-`run.sh` is wrapping binary within [`tput`](http://man7.org/linux/man-pages/man1/tput.1.html), where it cleans and locks terminal, hides terminal cursor. These things ar terminal specific, thus are not in code.
+`run.sh` is wrapping binary within [`tput`](http://man7.org/linux/man-pages/man1/tput.1.html), where it cleans and locks terminal, hides terminal cursor. These things are terminal specific, thus are not in code.
 
 ```sh
 ./run.sh --argumentA 1  --argumentB 2
@@ -223,7 +223,7 @@ GNU stack comes via [Armbian](https://www.armbian.com) (*server* variation obvio
 
 The mentioned *Mali* loadable kernel object was built against kernel headers, *lima* unloaded, *mali* loaded.
 
-*Allwinner H3* becomes hot, very hot. This is why [megous/linux](https://github.com/megous/linux) step was used while building the kernel - Ondřej Jirman has tried to [address this issue](http://linux-sunxi.org/Template:H3_Support_status#Mainline_kernel).
+*Allwinner H3* becomes hot, very hot. This is why Ondřej Jirman's work was used while building the kernel -  @megous has tried to [address this issue](http://linux-sunxi.org/Template:H3_Support_status#Mainline_kernel).
 
 ## Building on devbenches
 
@@ -234,7 +234,7 @@ The mentioned *Mali* loadable kernel object was built against kernel headers, *l
 
 ### Feeling lucky?
 
-It is possibe that all devtools needed are already on your machine.
+It is possible that all devtools needed are already on your machine.
 
 #### MSW MSVC
 
@@ -266,6 +266,6 @@ See contents of `Debug` or `Release`.
 
 ## Other notes
 
-Waiting for *Midgard*s on ūbercheap SoCs with drivers. Or maybe float buffers on exsisting ones?
+Waiting for *Midgard*s on ūbercheap SoCs with drivers. Or maybe float buffers on existing ones?
 
 `cat /dev/urandom > /dev/fb0`
