@@ -46,7 +46,7 @@ git clone thisrepo && cd thisrepo
 * `<your_favourite_editor_to_edit> Makefile`
 * change `MALIINCLIBDIR` and `MALIINCHEADERDIR`
 * `make`
-* `./run.sh --width 1920 --height 1080`
+* `bash run.sh --width 1920 --height 1080`
 
 ### About dependencies
 
