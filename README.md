@@ -44,6 +44,7 @@ git clone thisrepo && cd thisrepo
 * `bash HelloFBdev/dependencies/shared/download_shared_dependencies-posix.sh`
 * `cd HelloFBdev/projectfiles/fbdev-<soc_name>`
 * `<your_favourite_editor_to_edit> Makefile`
+* change `MALIINCLIBDIR` and `MALIINCHEADERDIR`
 * `make`
 * `./run.sh --width 1920 --height 1080`
 

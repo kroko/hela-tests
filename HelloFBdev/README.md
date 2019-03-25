@@ -11,6 +11,7 @@ See this repo root readme which should explain steps to build on SoC in detail.
 * `bash dependencies/shared/download_shared_dependencies-posix.sh`
 * `cd projectfiles/fbdev-<soc_name>`
 * `<your_favourite_editor_to_edit> Makefile`
+* change `MALIINCLIBDIR` and `MALIINCHEADERDIR`
 * `make`
 * `./run.sh --width 1920 --height 1080`
 
