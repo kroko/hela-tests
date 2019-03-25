@@ -173,7 +173,7 @@ cd <project_name>/projectfiles/fbdev-<soc_name>
 
 to explicitly specify inputs
 
-```
+```sh
 cd <project_name>/projectfiles/fbdev-<soc_name>
 GL_KEYBOARD=/dev/input/event1 GL_MOUSE=/dev/input/event0 ./run.sh --width 1920 --height 1080
 ```
