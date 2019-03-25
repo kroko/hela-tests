@@ -260,8 +260,8 @@
 		93E372392248048200ADB4F2 /* embedded-linux-fbdev-mali-allwinner-mali-utgard */ = {
 			isa = PBXGroup;
 			children = (
-				93E3723A2248048200ADB4F2 /* RunnerLinuxFbdevMaliAllwinner.cpp */,
 				93E3723B2248048200ADB4F2 /* NucleusLinuxFbdevMaliAllwinner.cpp */,
+				93E3723A2248048200ADB4F2 /* RunnerLinuxFbdevMaliAllwinner.cpp */,
 			);
 			path = "embedded-linux-fbdev-mali-allwinner-mali-utgard";
 			sourceTree = "<group>";
