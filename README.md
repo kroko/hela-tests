@@ -4,7 +4,7 @@ No gears.
 
 ## What?
 
-These domos were created inhouse in order to test [OpenGL ES](https://en.wikipedia.org/wiki/OpenGL_ES) on top of [EGL](https://en.wikipedia.org/wiki/EGL_(API)) interface on SoC's that have [Utgard - Mali-400 series](https://en.wikipedia.org/wiki/Mali_(GPU)) GPUs and [Mali](https://en.wikipedia.org/wiki/Mali_(GPU)) driver whilst running on [Linux framebuffer](https://en.wikipedia.org/wiki/Linux_framebuffer) natively (no pbuffer).
+These demos were created inhouse as PoC for [OpenGL ES](https://en.wikipedia.org/wiki/OpenGL_ES) on top of [EGL](https://en.wikipedia.org/wiki/EGL_(API)) interface on SoC'es that have [Utgard - Mali-400 series](https://en.wikipedia.org/wiki/Mali_(GPU)) GPUs and [Mali](https://en.wikipedia.org/wiki/Mali_(GPU)) driver whilst running on [Linux framebuffer](https://en.wikipedia.org/wiki/Linux_framebuffer) natively (no pbuffer).
 
 No *wayland*, no *Xlib*, no *DirectFB*, no *DRM*. Just *EGL* & *GLES* on *FBDev* within bare terminal.
 
@@ -12,9 +12,9 @@ PoC was demanded for [Allwiner's Utgard - Mali-400 series](http://linux-sunxi.or
 
 ## Why?
 
-An [Allwinner H3](http://linux-sunxi.org/H3) based board [Orange Pi Lite](http://www.orangepi.org/orangepilite/) w/ 512MB DDR3 SDRAM costing $12 was given which includes *Mali400MP2* GPU, [sun8i](https://github.com/torvalds/linux/blob/master/arch/arm/boot/dts/sun8i-h3.dtsi) device tree. A question was asked - is it possible to create *OpenGL ES* application that runs directly on *H3* without any desktop environment on mainline kernel and if yes, what would be framerate for FHD output on this board? It coincided with another project where low-cost Alwinner's were evaluated for realtime (simple ^_^) graphics. Somehow it resulted in creating these demos.
+An [Allwinner H3](http://linux-sunxi.org/H3) based board [Orange Pi Lite](http://www.orangepi.org/orangepilite/) w/ 512MB DDR3 SDRAM costing $12 was given which includes *Mali400MP2* GPU, [sun8i](https://github.com/torvalds/linux/blob/master/arch/arm/boot/dts/sun8i-h3.dtsi) device tree. A question was asked - is it possible to create *OpenGL ES* application that runs directly on *H3* without any desktop environment on mainline kernel and if yes, what would be framerate for FHD output on this board? It coincided with another project where low-cost Alwinner's were evaluated for realtime (simple ^_^) graphics. Somehow it resulted in creating an abstraction layer [Hela]() for beeing able to wite on x64 and test on given SoC. These simple demos are just made public in hope others would benefit in testing their Allwinner SoCs, kernel configs, Mali drivers.
 
-Again, that does not mean that this demo won't run on other SoCs (at least, it probably should on all *Allwinner* /w *Utgard* SoCs that can work with *Mali* drivers mentioned below).
+That does not mean that these demo won't run on other SoCs (at least, it probably should on all *Allwinner* /w *Utgard* SoCs that can work with *Mali* drivers mentioned below). And if not, you can look at how *Hela* is constructed and throw in another *Nucleus* typedef branch.
 
 ## Drivers
 
