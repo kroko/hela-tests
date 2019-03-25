@@ -13,7 +13,7 @@ If you also want to compile the project on x64 devbench, then first you have to 
 * `bash shared/download_shared_dependencies-posix.sh` for POSIX shell
 * `shared/download_shared_dependencies-msw.bat` for MSW via *Developer Command Promt* (POSIX variant should work on WSL)
 
-and then navigate to `devbenches/<os>/` where you should find *README* and/or sript that will download and build GLFW and GLAD for the specific OS.
+and then navigate to `devbenches/<devbench_os>/` where you should find *README* and/or sript that will download and build GLFW and GLAD for the specific OS.
 
 ## Next
 

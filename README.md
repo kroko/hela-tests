@@ -55,7 +55,7 @@ Dependencies are divided between stuff that is for SoC (main target) and additio
 
 * `<project_name>/dependencies/shared/` also holds other dependencies, that are needed for `code` to run, for example *GLM*, *stb* a.o. helpers go there.
 
-* `<project_name>/dependencies/devbenches/<os>/` holds all dependencies that are needed on top of *shared* in order to work on and compile project on desktop (x64) OSes. Probably only deps that go in there are are *GLFW* and *GLAD*, see notes further below.
+* `<project_name>/dependencies/devbenches/<devbench_os>/` holds all dependencies that are needed on top of *shared* in order to work on and compile project on desktop (x64) OSes. Probably only deps that go in there are are *GLFW* and *GLAD*, see notes further below.
 
 #### Project description (per project)
 
