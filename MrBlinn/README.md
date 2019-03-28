@@ -2,7 +2,7 @@
 
 ## About
 
-James F. Blinn (born 1949) is an American computer scientist who first became widely known for his work as a computer graphics expert at NASA's Jet Propulsion Laboratory (JPL), particularly his work on the pre-encounter animations for the Voyager project, his work on the Carl Sagan documentary series Cosmos, and the research of the Blinn–Phong shading model. [1](https://en.wikipedia.org/wiki/Jim_Blinn)
+James F. Blinn (born 1949) is an American computer scientist who first became widely known for his work as a computer graphics expert at NASA's Jet Propulsion Laboratory (JPL), particularly his work on the pre-encounter animations for the Voyager project, his work on the Carl Sagan documentary series Cosmos, and the research of the Blinn–Phong shading model. [[1]](https://en.wikipedia.org/wiki/Jim_Blinn)
 
 ## Building on SoC
 
