@@ -52,7 +52,9 @@ PATH_GLAD_GENERATOR=$PATH_DEP/tmp/glad-generator
 PATH_GLAD_OUT=$PATH_DEP/glad/
 mkdir -p "$PATH_GLAD_GENERATOR"
 git clone --branch master --single-branch --depth 1 https://github.com/Dav1dde/glad.git "$PATH_GLAD_GENERATOR"
-python "$PATH_GLAD_GENERATOR/main.py" --out-path="$PATH_GLAD_OUT" --generator=c --spec=gl --profile=core
+cd $PATH_GLAD_GENERATOR
+python -m glad --out-path="$PATH_GLAD_OUT" --generator=c --spec=gl --profile=core
+cd -
 rm -rf "$PATH_GLAD_GENERATOR"
 echo "... GLAD phase ended."
 
