@@ -22,7 +22,9 @@ set PATH_GLAD_GENERATOR=%PATH_DEP%tmp\glad-generator
 set PATH_GLAD_OUT=%PATH_DEP%glad
 md "%PATH_GLAD_GENERATOR%"
 git clone --branch master --single-branch --depth 1 https://github.com/Dav1dde/glad.git "%PATH_GLAD_GENERATOR%"
-py "%PATH_GLAD_GENERATOR%\main.py" --out-path="%PATH_GLAD_OUT%" --generator=c --spec=gl --profile=core
+cd "%PATH_GLAD_GENERATOR%"
+py -m glad --out-path="%PATH_GLAD_OUT%" --generator=c --spec=gl --profile=core
+cd "%PATH_USER_CALL%"
 rd "%PATH_GLAD_GENERATOR%" /s /q
 echo ... GLAD phase ended.
 
